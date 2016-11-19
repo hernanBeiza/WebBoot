@@ -1,6 +1,14 @@
+<%-- 
+    Document   : index.jsp
+    Created on : Nov 19, 2016, 8:54:32 AM
+    Author     : hernanBeiza
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>WebBoot</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +25,13 @@
             <div class="row">
                 <%
                     String mensajes = (String)session.getAttribute("session=mensajes");
-                    out.println(mensajes);
+                    if(mensajes!=null){
+                        out.println("<div class='alert alert-danger' role='alert'>"+mensajes+"</div>");
+                    }
                 %> 
                 <div class="col-md-4 col-md-offset-4">
                     <h2 class="text-center form-heading">Login</h2>
-                    <form action="login.jsp">
+                    <form action="jsp/login.jsp">
                         <div class="form-group">
                             <input type="email" placeholder="Email" name="email" class="form-control" />
                         </div>
@@ -29,7 +39,7 @@
                             <input type="password" placeholder="Contraseña" name="contrasena" class="form-control" />
                         </div>
                         <button class="btn btn-primary btn-block submit-button" type="submit">Iniciar Sesión</button>
-                        <a href="registro.html" class="forgot">¿No tienes una cuenta? ¡Registrate aqui!</a>
+                        <a href="registroForm.jsp" class="forgot">¿No tienes una cuenta? ¡Registrate aqui!</a>
                     </form>
                 </div>
             </div>

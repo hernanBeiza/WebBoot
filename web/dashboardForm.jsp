@@ -1,12 +1,21 @@
+<%-- 
+    Document   : dashboard.jsp
+    Created on : Nov 19, 2016, 10:21:44 AM
+    Author     : hernanBeiza
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dashboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="bootstrap/css/bootstrap.min.css"/>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>        
+
+        <title>Dashboard</title>
     </head>
     <body>
         <div class="container">
@@ -36,7 +45,7 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="logout.jsp">Cerrar Sesión</a></li>
+                        <li><a href="jsp/logout.jsp">Cerrar Sesión</a></li>
                       </ul>
                     </li>
                     </ul>
